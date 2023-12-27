@@ -1,7 +1,7 @@
 @mixin grid-default($i) {
   display: grid;
   grid-template-columns: repeat($i, 1fr);
-  gap: 30px; //TODO: Дефолтное значение
+  gap: 30px;
 }
 
 .grid-tpl-layout {
