@@ -1,0 +1,9 @@
+.submenu {
+  overflow: hidden;
+  height: 0;
+  transition: height 240ms cubic-bezier(.4,0,.6,1);
+}
+
+.submenu__content {
+  padding: 40px 0;
+}

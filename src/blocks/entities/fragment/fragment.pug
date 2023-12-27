@@ -31,7 +31,10 @@ mixin fragment-text({desktopStyle, mobileStyle, className, dataTheme, text, coun
 mixin fragment-img({img})
   img.fragment__img(src=img alt="")
 
-mixin fragment-background({video})
+mixin fragment-background({video, img})
   a.fragment__background&attributes(attributes)
-    video(playsinline=""  autoplay="" muted loop)
-      source(src=video)
+    if (video)
+      video(playsinline=""  autoplay="" muted loop)
+        source(src=video)
+    if(img)
+      img(src=img alt="")

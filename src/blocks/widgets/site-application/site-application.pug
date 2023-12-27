@@ -1,21 +1,19 @@
-mixin module-marketing(dataTheme)
+mixin site-application(dataTheme)
   +fragment({
     mobileStyle: `
       display: flex;
-      padding-top: 181px;
-      padding-bottom: 120px;
+      padding-top: 132px;
       flex-direction: column;
       align-items: center;
-      background: var(--Cod-Gray, #101010);
+      background: var(--Linear-Sky, linear-gradient(180deg, #F5F5F7 0%, #BED1D9 100%));
     `,
     desktopStyle: `
       display: flex;
       padding-top: 85px;
-      padding-bottom: 0;
       flex-direction: column;
       align-items: center;
       border-radius: 8px;
-      background: var(--SystemBlack, #121212);
+      background: linear-gradient(180deg, #F5F5F7 0%, #BED1D9 100%);
     `,
     dataTheme: dataTheme,
   })
@@ -25,23 +23,24 @@ mixin module-marketing(dataTheme)
         padding: 0px 15px;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         align-self: stretch;
       `,
       desktopStyle: `
         display: flex;
+        padding: 0px 173px;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         align-self: stretch;
       `,
       count: 1,
       dataTheme: dataTheme,
     })
       +fragment-text({
-        text: "Добро пожаловать в мир Perfomance маркетинга",
+        text: "Сайт-приложение",
         mobileStyle: `
-          color: var(--SystemWhite-Dark, #F5F5F7);
+          color: var(--Cod-Gray, #101010);
           text-align: center;
           /* Title 32 Semibold */
           font-family: SF Pro Display;
@@ -50,27 +49,25 @@ mixin module-marketing(dataTheme)
           font-weight: 600;
           line-height: 36px; /* 112.5% */
           letter-spacing: 0.064px;
-          width: 305.11px;
         `,
         desktopStyle: `
-          color: var(--SystemWhite-Dark, #F5F5F7);
+          color: var(--SystemBlack, #121212);
           text-align: center;
-          /* Title 48 Semibold */
+          /* Big Title (S) */
           font-family: SF Pro Display;
           font-size: 48px;
           font-style: normal;
           font-weight: 600;
-          line-height: 52.01px; /* 108.354% */
+          line-height: 52px; /* 108.333% */
           letter-spacing: -0.096px;
-          width: 628.83px;
         `,
         count: 1,
         dataTheme: dataTheme,
       })
       +fragment-text({
-        text: "Превосходство в производительности",
+        text: "Супербыстрый, интуитивно понятный  интерфейсы с феноменальной производительностью.",
         mobileStyle: `
-          color: var(--systemWhite80-Dark, rgba(255, 255, 255, 0.80));
+          color: var(--Cod-Gray, #101010);
           text-align: center;
           /* Body 19 Regular */
           font-family: SF Pro Display;
@@ -78,19 +75,17 @@ mixin module-marketing(dataTheme)
           font-style: normal;
           font-weight: 400;
           line-height: 23px; /* 121.053% */
-          width: 207.085px;
         `,
         desktopStyle: `
-          color: var(--systemWhite80-Dark, rgba(255, 255, 255, 0.80));
+          color: var(--SystemBlack, #121212);
           text-align: center;
-          /* Body 24 Regular */
+          /* Title 24 (R) */
           font-family: SF Pro Display;
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
           line-height: 28px; /* 116.667% */
           letter-spacing: 0.216px;
-          width: initial;
         `,
         count: 2,
         tag: 'p',
@@ -99,11 +94,11 @@ mixin module-marketing(dataTheme)
     +fragment-wrap({
       mobileStyle: `
         display: flex;
-        padding: 24px;
+        padding: 24px 24px 32px 24px;
         justify-content: center;
         align-items: center;
         align-content: center;
-        gap: 32px;
+        gap: 14px 16px;
         align-self: stretch;
         flex-wrap: wrap;
       `,
@@ -113,7 +108,7 @@ mixin module-marketing(dataTheme)
         justify-content: center;
         align-items: center;
         align-content: center;
-        gap: 16px;
+        gap: 14px 16px;
         align-self: stretch;
         flex-wrap: wrap;
       `,
@@ -121,32 +116,16 @@ mixin module-marketing(dataTheme)
       dataTheme: dataTheme,
     })
       a.btn-link(href="#")
-        span Подробнее
+        span Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn.btn--primary-border(href="#") Презентация
         svg(width="7" height="12")
           use(href="img/symbols.svg#icon-right")
     +fragment-wrap({
-      mobileStyle: `
-        display: flex;
-        height: 262px;
-        padding: 12px 10px 0px 10px;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        flex-shrink: 0;
-        align-self: stretch;
-      `,
-      desktopStyle: `
-        display: flex;
-        height: 286px;
-        padding: 24px 10px;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        align-self: stretch;
-      `,
       count: 3,
       dataTheme: dataTheme,
     })
       +fragment-img({
-        img: 'img/content/marysya2.png'
+        img: 'img/content/site-applicationpng.png'
       })

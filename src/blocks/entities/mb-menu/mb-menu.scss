@@ -2,10 +2,8 @@ $transition-menu: opacity 0.3s, transform 0.7s cubic-bezier(.4,0,.6,1);
 $ident: 25px;
 
 .mb-menu {
-  //overflow: hidden;
   height: 0;
   transition: height 480ms cubic-bezier(.4,0,.6,1) 80ms,background 480ms cubic-bezier(.4,0,.6,1) 80ms;
-  //background-color: #101010;
 
   @media (min-width: $screen-xl) {
     display: none;
@@ -21,13 +19,12 @@ $ident: 25px;
   transition-duration: .24s;
   transition-property: opacity,transform,visibility;
   transition-timing-function: cubic-bezier(.4,0,.6,1),cubic-bezier(.4,0,.6,1),step-start;
-
-  //ПОДУМАТЬ ДЛЯ МОБИЛКИ
-  //min-height: 100%;
+  height: 100%;
 }
 
 .mb-menu__wrap {
   position: relative;
+  height: 100%;
 }
 
 .mb-menu__close {
@@ -49,6 +46,8 @@ $ident: 25px;
 .mb-menu__list,
 .mb-menu__sub-list {
   @include ul-none;
+  height: 100%;
+  overflow: auto;
 }
 
 .mb-menu__link {
@@ -62,9 +61,8 @@ $ident: 25px;
 
 .mb-menu__list {
   transition: $transition-menu;
-  transition-delay: 0.15s;
 
-  &.hidden-menu {
+  &.visibility-hidden {
     transform: translateX(-$ident);
   }
 }
@@ -76,60 +74,7 @@ $ident: 25px;
   width: 100%;
   transition: $transition-menu;
 
-  &.hidden-menu {
+  &.visibility-hidden {
     transform: translateX($ident);
-  }
-}
-
-//Утилиты
-
-.hidden-menu {
-  opacity: 0;
-  z-index: -1;
-  visibility: hidden;
-}
-
-.show-open {
-  .mb-menu {
-    height: 100dvh;
-  }
-
-  .mb-menu__content {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0);
-  }
-
-  @media (max-width: $screen-xl - 1) {
-    .page-header {
-      background: #161617;
-    }
-
-    .logo {
-      opacity: 0;
-    }
-  }
-}
-
-@keyframes fadeOutLeft {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    transform: translate3d(-$ident, 0, 0);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d($ident, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 }

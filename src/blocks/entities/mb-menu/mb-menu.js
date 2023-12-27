@@ -2,7 +2,8 @@ export class mbMenu {
   constructor({
     menu,
     burger,
-    toggleClassNameBody
+    toggleClassNameBody,
+    timeoutDuration
   }) {
     this.menu = document.querySelector(menu);
     this.burger = document.querySelector(burger);
@@ -11,9 +12,10 @@ export class mbMenu {
     this.menuBack = this.menu.querySelector("[data-menu-back]");
     this.bindingSubItem = this.menu.querySelectorAll('[data-binding-sub-item]');
     this.toggleClassNameBody = toggleClassNameBody;
+    this.timeoutDuration = timeoutDuration;
 
     this.NAME_CLASS = {
-      hiddenMenu: 'hidden-menu',
+      hiddenMenu: 'visibility-hidden',
     }
 
     this._init();
@@ -23,12 +25,12 @@ export class mbMenu {
     this.mainMenu.classList.add(this.NAME_CLASS.hiddenMenu);
   }
 
-  hiddenMenuBack() {
-    this.menuBack.classList.add(this.NAME_CLASS.hiddenMenu)
-  }
-
   showMainMenu() {
     this.mainMenu.classList.remove(this.NAME_CLASS.hiddenMenu);
+  }
+
+  hiddenMenuBack() {
+    this.menuBack.classList.add(this.NAME_CLASS.hiddenMenu)
   }
 
   showMenuBack() {
@@ -45,19 +47,21 @@ export class mbMenu {
     const bindingSubItem = this.menu.querySelector(`[data-binding-sub-item="${e.target.dataset.subItem}"]`);
     this.hiddenMainMenu();
 
-    this.showMenuBack()
-    bindingSubItem.classList.remove(this.NAME_CLASS.hiddenMenu);
+    setTimeout(() => {
+      this.showMenuBack();
+      bindingSubItem.classList.remove(this.NAME_CLASS.hiddenMenu)
+    }, this.timeoutDuration)
   }
 
-  resetSubMenu() {
+  resetSubMenu(time = this.timeoutDuration) {
     this.bindingSubItem.forEach(elem => elem.classList.add(this.NAME_CLASS.hiddenMenu));
     this.hiddenMenuBack();
-    this.showMainMenu();
+    setTimeout(() => this.showMainMenu(), time)
   }
 
   closeMenu() {
     this.toggleBurger();
-    this.resetSubMenu();
+    this.resetSubMenu(400);
   }
 
   _events() {
@@ -70,9 +74,3 @@ export class mbMenu {
     this._events();
   }
 }
-
-new mbMenu({
-  menu: '.mb-menu',
-  burger: '.burger',
-  toggleClassNameBody: 'show-open'
-})

@@ -1,0 +1,15 @@
+mixin bg-video(dataTheme)
+  +fragment({
+    mobileStyle: `
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 8px;
+        background: #121212;
+        height: 500px
+      `,
+    dataTheme: dataTheme,
+  })
+    +fragment-background({
+      video: 'https://barashev.com/image/video/Barashev.mp4'
+    })(href="#")

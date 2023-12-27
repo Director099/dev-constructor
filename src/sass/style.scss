@@ -1,18 +1,18 @@
-@import "../../node_modules/animate.css/animate.css";
-
 // Config
 @import "../blocks/shared/style-libs/constans/variables";
 @import "../blocks/shared/style-libs/mixins/grid-mixins";
 @import "../blocks/shared/style-libs/fonts/font-guid";
 
 // My style
-@import "src/blocks/shared/style-libs/fonts/fonts";
-
+@import "../blocks/shared/style-libs/fonts/fonts";
 @import "../blocks/shared/style-libs/global/global";
 
 @import "../blocks/shared/style-libs/grid-tpl/grid-tpl";
-@import "../blocks/shared/style-libs/display/display";
 @import "../blocks/shared/style-libs/mixins/mixins";
+@import "../blocks/shared/style-libs/display";
+@import "../blocks/shared/style-libs/show-open";
+@import "../blocks/shared/style-libs/visibility-hidden";
+@import "../blocks/shared/style-libs/submenu";
 
 @import "../blocks/shared/ui/btn/btn";
 @import "../blocks/shared/ui/btn-link/btn-link";
@@ -31,31 +31,10 @@
 @import "../blocks/entities/contacts-info/contacts-info";
 @import "../blocks/entities/socials/socials";
 @import "../blocks/entities/develop/develop";
-@import "../blocks/entities/hover-menu/hover-menu";
+@import "../blocks/shared/js-config/hover-menu/hover-menu";
 @import "../blocks/entities/mb-menu/mb-menu";
 
 @import "../blocks/widgets/page-header/page-header";
 @import "../blocks/widgets/page-footer/page-footer";
 @import "../blocks/widgets/sidebar/sidebar";
-
-//TODO: сделай requestAnimationFrame
-.nav-open .hover-overlay {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-start 80ms
-}
-
-.submenu {
-  overflow: hidden;
-  height: 0;
-  transition: height 240ms cubic-bezier(.4,0,.6,1);
-}
-
-.submenu__content {
-  padding: 40px 0;
-}
-
-.page-header {
-  transition: height 480ms cubic-bezier(.4,0,.6,1) 80ms,background 480ms cubic-bezier(.4,0,.6,1) 80ms;
-}
 

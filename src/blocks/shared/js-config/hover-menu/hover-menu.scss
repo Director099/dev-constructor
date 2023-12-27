@@ -14,3 +14,9 @@
   z-index: 9998;
   transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-end 80ms;
 }
+
+.nav-open .hover-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-start 80ms
+}

@@ -1,0 +1,25 @@
+.show-open {
+  overflow: hidden;
+
+  .mb-menu {
+    height: 100dvh;
+  }
+
+  .mb-menu__content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0);
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    .page-header {
+      background: #161617;
+    }
+
+    .logo {
+      position: relative;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+}

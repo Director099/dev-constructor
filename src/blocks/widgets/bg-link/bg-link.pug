@@ -1,0 +1,74 @@
+mixin bg-link(dataTheme)
+  +fragment({
+    mobileStyle: `
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: #121212;
+      height: 500px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    `,
+    dataTheme: dataTheme,
+  })
+    +fragment-background({
+      img: 'img/content/bg-picture.jpg'
+    })(href="#")
+    +fragment-wrap({
+      mobileStyle: `
+        display: flex;
+        padding: 0px 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+      `,
+      count: 1,
+      dataTheme: dataTheme,
+    })
+      +fragment-text({
+        text: "Кликабельный задний фон",
+        mobileStyle: `
+          color: var(--SystemWhite-Dark, #000);
+          text-align: center;
+          /* Title 32 Semibold */
+          font-family: SF Pro Display;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 36px; /* 112.5% */
+          letter-spacing: 0.064px;
+        `,
+        count: 1,
+        dataTheme: dataTheme,
+      })
+    +fragment-wrap({
+      mobileStyle: `
+        display: flex;
+        padding: 24px 24px 32px 24px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 14px 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        gap: 20px;
+      `,
+      count: 2,
+      dataTheme: dataTheme,
+    })
+      a.btn.btn--primary(href="#") Подробнее
+      a.btn.btn--primary-border(href="#") Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn-link(href="#")
+        span Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn-link.btn-link--m-size(href="#")
+        span Презентация
+        svg(width="18" height="18")
+          use(href="img/symbols.svg#icon-play")
+

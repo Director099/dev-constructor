@@ -1,0 +1,46 @@
+mixin all-buttons(dataTheme)
+  +fragment({
+    mobileStyle: `
+      display: flex;
+      padding: 35px;
+      flex-direction: column;
+      align-items: center;
+      background: var(--Cod-Gray, #101010);
+    `,
+    dataTheme: dataTheme,
+  })
+    +fragment-text({
+      text: "Виды кнопок",
+      mobileStyle: `
+        color: var(--SystemBlack, #fff);
+      `,
+      count: 1,
+      dataTheme: 3,
+    })
+    +fragment-wrap({
+      mobileStyle: `
+        display: flex;
+        padding: 24px 24px 32px 24px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 14px 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        gap: 20px;
+      `,
+      count: 2,
+      dataTheme: dataTheme,
+    })
+      a.btn.btn--primary(href="#") Подробнее
+      a.btn.btn--primary-border(href="#") Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn-link(href="#")
+        span Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn-link.btn-link--m-size(href="#")
+        span Презентация
+        svg(width="18" height="18")
+          use(href="img/symbols.svg#icon-play")
