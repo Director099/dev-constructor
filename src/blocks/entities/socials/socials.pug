@@ -1,0 +1,37 @@
+mixin socials()
+  -
+    const list = [
+      {
+        img: 'tg',
+        alt: 'Телеграм'
+      },
+      {
+        img: 'wp',
+        alt: 'WhatsApp'
+      },
+      {
+        img: 'mail',
+        alt: 'Почта'
+      },
+      {
+        img: 'inst',
+        alt: 'instagram'
+      },
+      {
+        img: 'vk',
+        alt: 'ВКонтакте'
+      },
+      {
+        img: 'fb',
+        alt: 'FaceBook'
+      },
+      {
+        img: 'yt',
+        alt: 'YouTube'
+      },
+    ];
+  ul.socials
+    each item in list
+      li.socials__item
+        a.socials__link
+          img(src=`img/content-icon/${item.img}.svg` alt=item.alt)

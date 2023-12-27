@@ -1,0 +1,9 @@
+.develop__text {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: $color-primary;
+    border-bottom: 1px solid $link-border;
+  }
+}

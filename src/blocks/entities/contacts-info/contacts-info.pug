@@ -1,0 +1,12 @@
+mixin contacts-info()
+  .contacts-info&attributes(attributes)
+    header.contacts-info__wrap
+      a.contacts-info__header-link(href="#")
+        .contacts-info__img
+          img(src="img/content/we-are-online.png")
+        section.contacts-info__content
+          h2.contacts-info__title barashev.com
+          .contacts-info__desc
+            p performance-маркетинг
+    .contacts-info__wrap
+      +socials()

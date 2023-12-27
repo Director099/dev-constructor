@@ -1,0 +1,130 @@
+// В этом файле должны быть стили для БЭМ-блока burger, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$toggler-part-height:         3px !default;
+$toggler-part-bg-color:       #000 !default;
+
+$transition-time:             0.3s !default;
+
+//- https://www.youtube.com/watch?v=hgNGfoLkxpg меню apple
+
+.burger {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+  padding: 0;
+  background: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  > span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: $toggler-part-height;
+    font-size: 0;
+    color: transparent;
+    background: $toggler-part-bg-color;
+    transition: background $transition-time $transition-time;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $toggler-part-height;
+      background: $toggler-part-bg-color;
+      transform-origin: 50% 50%;
+      transition: top $transition-time $transition-time, transform $transition-time;
+    }
+
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      top: 10px;
+    }
+  }
+
+  &--close {
+
+    > span {
+      transition: background $transition-time 0s;
+      background: transparent;
+
+      &:before,
+      &:after {
+        transition: top $transition-time, transform $transition-time $transition-time;
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}
+
+.burger__line {
+  position: relative;
+  height: 2px;
+  width: 17px;
+  transition: transform 300ms ease-in-out;
+}
+
+.burger__inner {
+  height: 100%;
+  width: 100%;
+  background: $white;
+  border-radius: 4px;
+  position: absolute;
+  transition: transform 200ms ease-in-out;
+  transition-delay: 200ms;
+
+  &--1 {
+    top: 1px;
+    transform: translateY(-4px);
+  }
+
+  &--2 {
+    bottom: 1px;
+    transform: translateY(4px);
+  }
+}
+
+.burger.active {
+  .burger__line--1 {
+    transform: rotateZ(45deg);
+  }
+
+  .burger__line--2 {
+    transform: rotateZ(-45deg);
+  }
+
+  .burger__inner {
+    transform: none;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .burger__line {
+    transition-delay: 200ms;
+  }
+}

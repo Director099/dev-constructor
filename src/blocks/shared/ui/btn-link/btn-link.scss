@@ -1,0 +1,47 @@
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  color: $blue-default;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $blue-hover;
+
+    span::after {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    fill: currentColor;
+    transition: $time;
+  }
+
+  span {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      opacity: 0;
+      transition: $time;
+      background: $blue-hover;
+    }
+  }
+}

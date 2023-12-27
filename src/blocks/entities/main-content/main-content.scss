@@ -1,0 +1,8 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-xl) {
+    gap: var(--xl-gap-main-content);
+  }
+}

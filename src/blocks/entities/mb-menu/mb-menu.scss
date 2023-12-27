@@ -1,0 +1,135 @@
+$transition-menu: opacity 0.3s, transform 0.7s cubic-bezier(.4,0,.6,1);
+$ident: 25px;
+
+.mb-menu {
+  //overflow: hidden;
+  height: 0;
+  transition: height 480ms cubic-bezier(.4,0,.6,1) 80ms,background 480ms cubic-bezier(.4,0,.6,1) 80ms;
+  //background-color: #101010;
+
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+}
+
+.mb-menu__content {
+  padding-top: 31px;
+
+  opacity: 0;
+  transform: translateY(-8px);
+  transition-delay: calc(.2s + 0 * 20ms);
+  transition-duration: .24s;
+  transition-property: opacity,transform,visibility;
+  transition-timing-function: cubic-bezier(.4,0,.6,1),cubic-bezier(.4,0,.6,1),step-start;
+
+  //ПОДУМАТЬ ДЛЯ МОБИЛКИ
+  //min-height: 100%;
+}
+
+.mb-menu__wrap {
+  position: relative;
+}
+
+.mb-menu__close {
+  position: absolute;
+  bottom: calc(100% + 19px);
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  transition: $time;
+  transform: rotate(-180deg);
+
+  svg {
+    fill: $white;
+  }
+}
+
+.mb-menu__list,
+.mb-menu__sub-list {
+  @include ul-none;
+}
+
+.mb-menu__link {
+  @include Title24Semibold;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: $athens-gray;
+  padding: 8px 48px;
+}
+
+.mb-menu__list {
+  transition: $transition-menu;
+  transition-delay: 0.15s;
+
+  &.hidden-menu {
+    transform: translateX(-$ident);
+  }
+}
+
+.mb-menu__sub-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: $transition-menu;
+
+  &.hidden-menu {
+    transform: translateX($ident);
+  }
+}
+
+//Утилиты
+
+.hidden-menu {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.show-open {
+  .mb-menu {
+    height: 100dvh;
+  }
+
+  .mb-menu__content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0);
+  }
+
+  @media (max-width: $screen-xl - 1) {
+    .page-header {
+      background: #161617;
+    }
+
+    .logo {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-$ident, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d($ident, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

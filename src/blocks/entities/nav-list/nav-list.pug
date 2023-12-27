@@ -1,0 +1,6 @@
+mixin nav-list(navList)
+	ul.nav-list&attributes(attributes)
+		each item in navList
+			- const { link, text, attrs} = item
+			li.nav-list__item
+				a.nav-list__link(href= link)&attributes(attrs)!= text

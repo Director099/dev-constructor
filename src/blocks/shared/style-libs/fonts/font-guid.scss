@@ -1,0 +1,52 @@
+@mixin subheadings {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+}
+
+@mixin body15Semibold {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.12px;
+}
+
+@mixin footnote {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.078px;
+}
+
+@mixin body13Regular {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: 0.016px;
+}
+
+@mixin paragraph17Regular {
+  font-family: $font-family-2;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.23px;
+}
+
+@mixin paragraph19Regular {
+  font-family: $font-family-2;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.228px;
+}
+
+@mixin Title24Semibold {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.216px;
+}

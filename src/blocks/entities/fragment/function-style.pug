@@ -1,0 +1,24 @@
+mixin functionStyle({desktopStyle, mobileStyle, className, dataTheme})
+  -
+    const hasTheme = (dataTheme, style) =>
+      dataTheme ? `
+        [${dataTheme}] ${className} {
+          ${style}
+        }
+        ` : `
+          ${className} {
+            ${style}
+          }
+        `
+
+    const mobileStyleName = (style) => hasTheme(dataTheme, style);
+
+    const desktopStyleName = (style) => `
+        @media (min-width: ${mediaSize.xl}px) {
+          ${hasTheme(dataTheme, style)}
+        }
+      `;
+  if (desktopStyle || mobileStyle)
+    style
+      =!!mobileStyle ? mobileStyleName(mobileStyle) : null
+      =!!desktopStyle ? desktopStyleName(desktopStyle) : null

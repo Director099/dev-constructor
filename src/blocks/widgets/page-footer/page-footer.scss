@@ -1,0 +1,25 @@
+.page-footer {
+  position: relative;
+  text-align: center;
+  @include body13Regular;
+  color: $jumbo;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $shark;
+  margin-top: var(--gap-main-content);
+
+  @media (min-width: $screen-xl) {
+    background-color: transparent;
+    margin-top: var(--xl-gap-main-content);
+  }
+}
+
+.page-footer__text {
+  margin: 0;
+}
+
+.page-footer__column {
+  @media (min-width: $screen-xl) {
+    grid-column: 2;
+  }
+}

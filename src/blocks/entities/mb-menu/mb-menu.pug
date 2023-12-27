@@ -1,0 +1,20 @@
+mixin mb-menu
+  .mb-menu
+    .mb-menu__content
+      .mb-menu__wrap
+        button.mb-menu__close.hidden-menu(type="button" aria-label="Вернуться в главное меню" data-menu-back="")
+          svg(width="7" height="12")
+            use(href="img/symbols.svg#icon-right")
+        ul.mb-menu__list
+          each item, i in menuNav
+            - const { link, text, attrs} = item
+            li.mb-menu__item
+              a.mb-menu__link(href= link data-sub-item=i === 0 ? "1": "2")&attributes(attrs)!= text
+        ul.mb-menu__sub-list.hidden-menu(data-binding-sub-item="1")
+          each subItem in subMenuNav
+            li.mb-menu__sub-item
+              a.mb-menu__link(href="#")= subItem.text
+        ul.mb-menu__sub-list.hidden-menu(data-binding-sub-item="2")
+          each subItem in subMenuNav
+            li.mb-menu__sub-item
+              a.mb-menu__link(href="#")= subItem.text

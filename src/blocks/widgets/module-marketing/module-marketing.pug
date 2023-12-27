@@ -1,0 +1,99 @@
+mixin module-marketing(dataTheme)
+  +fragment({
+    mobileStyle: `
+      display: flex;
+      padding-top: 85px;
+      flex-direction: column;
+      align-items: center;
+      background: #121212;
+    `,
+    desktopStyle: `
+      border-radius: 8px;
+    `,
+    dataTheme: dataTheme,
+  })
+    +fragment-wrap({
+      mobileStyle: `
+        display: flex;
+        padding: 0px 20px;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+      `,
+      desktopStyle: `
+        padding: 0px 173px;
+      `,
+      count: 1,
+      dataTheme: dataTheme,
+    })
+      +fragment-text({
+        text: "Perfomance маркетинг",
+        mobileStyle: `
+          color: #F5F5F7;
+          text-align: center;
+          font-size: 34px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 41px; /* 120.588% */
+          letter-spacing: 0.374px;
+        `,
+        count: 1,
+        dataTheme: dataTheme,
+      })
+      +fragment-text({
+        text: "Удивительно простой и надежный способ передачи сообщений",
+        mobileStyle: `
+          color: rgba(255, 255, 255, 0.80);
+          text-align: center;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 34px; /* 121.429% */
+          letter-spacing: 0.364px;
+        `,
+        count: 2,
+        tag: 'p',
+        dataTheme: dataTheme,
+      })
+    +fragment-wrap({
+      mobileStyle: `
+        display: flex;
+        padding: 24px 24px 32px 24px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+      `,
+      count: 2,
+      dataTheme: dataTheme,
+    })
+      a.btn.btn--primary(href="#") Подробнее
+      a.btn.btn--primary-border(href="#") Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn-link(href="#")
+        span Презентация
+        svg(width="7" height="12")
+          use(href="img/symbols.svg#icon-right")
+      a.btn-link.btn-link--m-size(href="#")
+        span Презентация
+        svg(width="18" height="18")
+          use(href="img/symbols.svg#icon-play")
+    +fragment-wrap({
+      mobileStyle: `
+        display: flex;
+        height: 286px;
+        padding: 24px 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+      `,
+      count: 3,
+      dataTheme: dataTheme,
+    })
+      +fragment-img({
+        img: 'img/content/marysya2.png'
+      })

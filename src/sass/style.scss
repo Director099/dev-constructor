@@ -1,0 +1,61 @@
+@import "../../node_modules/animate.css/animate.css";
+
+// Config
+@import "../blocks/shared/style-libs/constans/variables";
+@import "../blocks/shared/style-libs/mixins/grid-mixins";
+@import "../blocks/shared/style-libs/fonts/font-guid";
+
+// My style
+@import "src/blocks/shared/style-libs/fonts/fonts";
+
+@import "../blocks/shared/style-libs/global/global";
+
+@import "../blocks/shared/style-libs/grid-tpl/grid-tpl";
+@import "../blocks/shared/style-libs/display/display";
+@import "../blocks/shared/style-libs/mixins/mixins";
+
+@import "../blocks/shared/ui/btn/btn";
+@import "../blocks/shared/ui/btn-link/btn-link";
+@import "../blocks/shared/ui/page/page";
+@import "../blocks/shared/ui/logo/logo";
+@import "../blocks/shared/ui/form/form";
+@import "../blocks/shared/ui/burger/burger";
+@import "../blocks/shared/ui/field-text/field-text";
+@import "../blocks/shared/ui/container/container";
+
+@import "../blocks/entities/fragment/fragment";
+@import "../blocks/entities/main-content/main-content";
+@import "../blocks/entities/contact-group/contact-group";
+@import "../blocks/entities/phone/phone";
+@import "../blocks/entities/nav-list/nav-list";
+@import "../blocks/entities/contacts-info/contacts-info";
+@import "../blocks/entities/socials/socials";
+@import "../blocks/entities/develop/develop";
+@import "../blocks/entities/hover-menu/hover-menu";
+@import "../blocks/entities/mb-menu/mb-menu";
+
+@import "../blocks/widgets/page-header/page-header";
+@import "../blocks/widgets/page-footer/page-footer";
+@import "../blocks/widgets/sidebar/sidebar";
+
+//TODO: сделай requestAnimationFrame
+.nav-open .hover-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-start 80ms
+}
+
+.submenu {
+  overflow: hidden;
+  height: 0;
+  transition: height 240ms cubic-bezier(.4,0,.6,1);
+}
+
+.submenu__content {
+  padding: 40px 0;
+}
+
+.page-header {
+  transition: height 480ms cubic-bezier(.4,0,.6,1) 80ms,background 480ms cubic-bezier(.4,0,.6,1) 80ms;
+}
+

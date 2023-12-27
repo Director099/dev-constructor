@@ -1,0 +1,37 @@
+include function-style.pug
+
+mixin fragment({desktopStyle, mobileStyle, className, dataTheme})
+  section.fragment(data-theme=dataTheme)
+    block
+    +functionStyle({
+      desktopStyle,
+      mobileStyle,
+      className: `[data-theme='${dataTheme}']`
+    })
+
+mixin fragment-wrap({desktopStyle, mobileStyle, className, count, dataTheme})
+  .fragment__wrap(data-theme-children=count)
+    block
+    +functionStyle({
+      desktopStyle,
+      mobileStyle,
+      className: `[data-theme-children='${count}']`,
+      dataTheme: `data-theme='${dataTheme}'`,
+    })
+
+mixin fragment-text({desktopStyle, mobileStyle, className, dataTheme, text, count, tag='h2'})
+  != `<${tag} class="fragment__text" data-theme-text='${count}'>${text}</${tag}>`
+  +functionStyle({
+    desktopStyle,
+    mobileStyle,
+    className: `[data-theme-text='${count}']`,
+    dataTheme: `data-theme='${dataTheme}'`
+  })
+
+mixin fragment-img({img})
+  img.fragment__img(src=img alt="")
+
+mixin fragment-background({video})
+  a.fragment__background&attributes(attributes)
+    video(playsinline=""  autoplay="" muted loop)
+      source(src=video)
