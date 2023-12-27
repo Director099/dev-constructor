@@ -9,30 +9,12 @@ mixin mb-menu
           each item, i in menuNav
             - const { link, text, attrs} = item
             li.mb-menu__item
-              a.mb-menu__link(href= link data-sub-item=i === 0 ? "1": "2")&attributes(attrs)!= text
-            li.mb-menu__item
-              a.mb-menu__link(href= link data-sub-item=i === 0 ? "1" : "2")&attributes(attrs)!= text
-            li.mb-menu__item
               a.mb-menu__link(href= link data-sub-item=i === 0 ? "1" : "2")&attributes(attrs)!= text
         ul.mb-menu__sub-list.visibility-hidden(data-binding-sub-item="1")
           each subItem in subMenuNav
             li.mb-menu__sub-item
               a.mb-menu__link(href="#")= subItem.text
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
         ul.mb-menu__sub-list.visibility-hidden(data-binding-sub-item="2")
           each subItem in subMenuNav
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
-            li.mb-menu__sub-item
-              a.mb-menu__link(href="#")= subItem.text
             li.mb-menu__sub-item
               a.mb-menu__link(href="#")= subItem.text
