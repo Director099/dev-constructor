@@ -1,6 +1,20 @@
+mixin sub-nav-list(text, link)
+  button.nav-list__arrow(aria-label="Расскрыть меню" data-toggle-nav-list="")
+  a.nav-list__link(href= link)&attributes(attrs)!= text
+  ul.nav-list__sub-item.collapse__wrap
+    li.nav-list__item.collapse
+      a.nav-list__link(href="#") ГОСТ
+    li.nav-list__item
+      a.nav-list__link(href="#") Каучуковые кольца
+    li.nav-list__item
+      a.nav-list__link(href="#") Фторкаучуковые кольца
+
 mixin nav-list(navList)
-	ul.nav-list&attributes(attributes)
-		each item in navList
-			- const { link, text, attrs} = item
-			li.nav-list__item
-				a.nav-list__link(href= link)&attributes(attrs)!= text
+  ul.nav-list&attributes(attributes)
+    each item, i in navList
+      - const { link, text, attrs} = item
+      li.nav-list__item
+        if (navList.length - 1 === i)
+          +sub-nav-list(text, link)
+        else
+          a.nav-list__link(href= link)&attributes(attrs)!= text
