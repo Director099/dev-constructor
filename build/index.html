@@ -372,7 +372,22 @@
                 </style>
               </div>
               <div class="fragment__wrap" data-theme-children="3">
-                <img class="fragment__img" src="img/content/marysya2.png" alt="" />
+                <img class="fragment__img" src="img/content/marysya2.png" data-theme-img="1" alt="" />
+                <style>
+                  [data-theme='1'] [data-theme-img='1']
+                  {
+                    max-width: 181.002px;
+                  }
+
+                  @media (min-width: 1230px)
+                  {
+                    [data-theme='1'] [data-theme-img='1']
+                    {
+                      max-width: 227.694px;
+                    }
+                  }
+
+                </style>
                 <style>
                   [data-theme='1'] [data-theme-children='3']
                   {
@@ -620,17 +635,60 @@
               </style>
             </section>
             <section class="fragment" data-theme="4">
-              <h2 class="fragment__text" data-theme-text='1'>Виды кнопок</h2>
-              <style>
-                [data-theme='3'] [data-theme-text='1']
-                {
-                  color: var(--SystemBlack, #fff);
-                }
+              <a class="fragment__background" href="#">
+                <img src="img/content/bg-picture.jpg" alt="" />
+              </a>
+              <div class="fragment__wrap" data-theme-children="1">
+                <h2 class="fragment__text" data-theme-text='1'>Кликабельный задний фон и виды кнопок</h2>
+                <style>
+                  [data-theme='4'] [data-theme-text='1']
+                  {
+                    color: var(--SystemWhite-Dark, #000);
+                    width: 250px;
+                    text-align: center;
+                    /* Title 32 Semibold */
+                    font-family: SF Pro Display;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 36px;
+                    /* 112.5% */
+                    letter-spacing: 0.064px;
+                  }
 
-              </style>
+                  @media (min-width: 1230px)
+                  {
+                    [data-theme='4'] [data-theme-text='1']
+                    {
+                      width: 450px;
+                    }
+                  }
+
+                </style>
+                <style>
+                  [data-theme='4'] [data-theme-children='1']
+                  {
+                    display: flex;
+                    padding: 0px 15px;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+                    align-self: stretch;
+                  }
+
+                </style>
+              </div>
               <div class="fragment__wrap" data-theme-children="2">
-                <a class="btn btn--primary" href="#">Подробнее</a>
-                <a class="btn btn--primary-border" href="#">Презентация<svg width="7" height="12">
+                <a class="btn btn--primary" href="#">
+                  <span>Подробнее</span>
+                </a>
+                <a class="btn btn--primary-border" href="#">
+                  <span>Презентация</span>
+                  <svg width="18" height="18">
+                    <use href="img/symbols.svg#icon-play"></use>
+                  </svg>
+                </a>
+                <a class="btn-link btn-link--m-size" href="#">Презентация<svg width="7" height="12">
                     <use href="img/symbols.svg#icon-right"></use>
                   </svg>
                 </a>
@@ -638,12 +696,6 @@
                   <span>Презентация</span>
                   <svg width="7" height="12">
                     <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <a class="btn-link btn-link--m-size" href="#">
-                  <span>Презентация</span>
-                  <svg width="18" height="18">
-                    <use href="img/symbols.svg#icon-play"></use>
                   </svg>
                 </a>
                 <style>
@@ -666,95 +718,6 @@
                 [data-theme='4']
                 {
                   display: flex;
-                  padding: 35px;
-                  flex-direction: column;
-                  align-items: center;
-                  background: var(--Cod-Gray, #101010);
-                }
-
-                @media (min-width: 1230px)
-                {
-                  [data-theme='4']
-                  {
-                    border-radius: 8px;
-                  }
-                }
-
-              </style>
-            </section>
-            <section class="fragment" data-theme="5">
-              <a class="fragment__background" href="#">
-                <img src="img/content/bg-picture.jpg" alt="" />
-              </a>
-              <div class="fragment__wrap" data-theme-children="1">
-                <h2 class="fragment__text" data-theme-text='1'>Кликабельный задний фон</h2>
-                <style>
-                  [data-theme='5'] [data-theme-text='1']
-                  {
-                    color: var(--SystemWhite-Dark, #000);
-                    text-align: center;
-                    /* Title 32 Semibold */
-                    font-family: SF Pro Display;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 36px;
-                    /* 112.5% */
-                    letter-spacing: 0.064px;
-                  }
-
-                </style>
-                <style>
-                  [data-theme='5'] [data-theme-children='1']
-                  {
-                    display: flex;
-                    padding: 0px 15px;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 8px;
-                    align-self: stretch;
-                  }
-
-                </style>
-              </div>
-              <div class="fragment__wrap" data-theme-children="2">
-                <a class="btn btn--primary" href="#">Подробнее</a>
-                <a class="btn btn--primary-border" href="#">Презентация<svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <a class="btn-link" href="#">
-                  <span>Презентация</span>
-                  <svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <a class="btn-link btn-link--m-size" href="#">
-                  <span>Презентация</span>
-                  <svg width="18" height="18">
-                    <use href="img/symbols.svg#icon-play"></use>
-                  </svg>
-                </a>
-                <style>
-                  [data-theme='5'] [data-theme-children='2']
-                  {
-                    display: flex;
-                    padding: 24px 24px 32px 24px;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    gap: 14px 16px;
-                    align-self: stretch;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                  }
-
-                </style>
-              </div>
-              <style>
-                [data-theme='5']
-                {
-                  display: flex;
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
@@ -766,7 +729,7 @@
 
                 @media (min-width: 1230px)
                 {
-                  [data-theme='5']
+                  [data-theme='4']
                   {
                     border-radius: 8px;
                   }

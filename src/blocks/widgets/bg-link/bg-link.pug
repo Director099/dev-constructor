@@ -31,9 +31,10 @@ mixin bg-link(dataTheme)
       dataTheme: dataTheme,
     })
       +fragment-text({
-        text: "Кликабельный задний фон",
+        text: "Кликабельный задний фон и виды кнопок",
         mobileStyle: `
           color: var(--SystemWhite-Dark, #000);
+          width: 250px;
           text-align: center;
           /* Title 32 Semibold */
           font-family: SF Pro Display;
@@ -42,6 +43,9 @@ mixin bg-link(dataTheme)
           font-weight: 600;
           line-height: 36px; /* 112.5% */
           letter-spacing: 0.064px;
+        `,
+        desktopStyle: `
+          width: 450px;
         `,
         count: 1,
         dataTheme: dataTheme,
@@ -61,16 +65,17 @@ mixin bg-link(dataTheme)
       count: 2,
       dataTheme: dataTheme,
     })
-      a.btn.btn--primary(href="#") Подробнее
-      a.btn.btn--primary-border(href="#") Презентация
+      a.btn.btn--primary(href="#")
+        span Подробнее
+      a.btn.btn--primary-border(href="#")
+        span Презентация
+        svg(width="18" height="18")
+          use(href="img/symbols.svg#icon-play")
+
+      a.btn-link.btn-link--m-size(href="#") Презентация
         svg(width="7" height="12")
           use(href="img/symbols.svg#icon-right")
       a.btn-link(href="#")
         span Презентация
         svg(width="7" height="12")
           use(href="img/symbols.svg#icon-right")
-      a.btn-link.btn-link--m-size(href="#")
-        span Презентация
-        svg(width="18" height="18")
-          use(href="img/symbols.svg#icon-play")
-

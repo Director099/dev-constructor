@@ -413,6 +413,12 @@ a.btn--disabled {
     border-color: #006ddb;
 }
 .btn-link {
+    font-family: "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.23px;
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -430,6 +436,14 @@ a.btn--disabled {
     background-color: transparent;
     background-image: none;
     cursor: pointer;
+}
+.btn-link--m-size {
+    font-family: "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.228px;
 }
 .btn-link:hover, .btn-link:focus {
     color: #027cf6;

@@ -28,8 +28,14 @@ mixin fragment-text({desktopStyle, mobileStyle, className, dataTheme, text, coun
     dataTheme: `data-theme='${dataTheme}'`
   })
 
-mixin fragment-img({img})
-  img.fragment__img(src=img alt="")
+mixin fragment-img({img, desktopStyle, mobileStyle, dataTheme, count})
+  img.fragment__img(src=img  data-theme-img=count alt="")
+  +functionStyle({
+    desktopStyle,
+    mobileStyle,
+    className: `[data-theme-img='${count}']`,
+    dataTheme: `data-theme='${dataTheme}'`,
+  })
 
 mixin fragment-background({video, img})
   a.fragment__background&attributes(attributes)
