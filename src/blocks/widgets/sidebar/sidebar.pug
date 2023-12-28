@@ -1,6 +1,7 @@
 mixin sidebar
-  aside.sidebar&attributes(attributes)
-    +nav-list(
-      menuNav
-    )
-    +contacts-info()
+  aside.sidebar.d-none.d-xl-block&attributes(attributes)
+    .sidebar__content
+      +nav-list(
+        menuNav
+      )
+      +contacts-info()
