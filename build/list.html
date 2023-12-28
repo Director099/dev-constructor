@@ -37,8 +37,8 @@
                 <div class="burger__inner burger__inner--2"></div>
               </div>
             </a>
-            <div class="grid-tpl-layout">
-              <div class="page-header__logo-wrap">
+            <div class="flex-tpl-layout">
+              <div class="flex-tpl-layout__left-col">
                 <a class="logo" href="index.html">
                   <picture>
                     <source srcset="img/content/logo.svg" media="(min-width: 1230px)" />
@@ -46,19 +46,21 @@
                   </picture>
                 </a>
               </div>
-              <div class="page-header__row d-none d-xl-flex">
-                <form class="form page-header__search">
-                  <label class="field-text field-text--search js-field">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" value="" name="search" placeholder="Поиск" />
-                      <button class="field-text__reset" type="reset" aria-label="Сброс"></button>
-                    </span>
-                  </label>
-                </form>
-                <div class="phone js-hover">
-                  <a class="phone__wrap phone__wrap--arrow" href="tel:+79175676767">
-                    <span class="phone__link phone__link--pd">+7 (917) 567-67-67</span>
-                  </a>
+              <div class="flex-tpl-layout__right-col">
+                <div class="page-header__row d-none d-xl-flex">
+                  <form class="form page-header__search">
+                    <label class="field-text field-text--search js-field">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" value="" name="search" placeholder="Поиск" />
+                        <button class="field-text__reset" type="reset" aria-label="Сброс"></button>
+                      </span>
+                    </label>
+                  </form>
+                  <div class="phone js-hover">
+                    <a class="phone__wrap phone__wrap--arrow" href="tel:+79175676767">
+                      <span class="phone__link phone__link--pd">+7 (917) 567-67-67</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -150,8 +152,8 @@
         </div>
       </header>
       <div class="container container--xs-p-none page__content">
-        <div class="grid-tpl-layout">
-          <aside class="sidebar d-none d-xl-block">
+        <div class="flex-tpl-layout page__grow">
+          <aside class="sidebar d-none d-xl-block flex-tpl-layout__left-col">
             <div class="sidebar__content">
               <ul class="nav-list">
                 <li class="nav-list__item">
@@ -196,37 +198,37 @@
                 <div class="contacts-info__wrap">
                   <ul class="socials">
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/tg.svg" alt="Телеграм" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/wp.svg" alt="WhatsApp" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/mail.svg" alt="Почта" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/inst.svg" alt="instagram" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/vk.svg" alt="ВКонтакте" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/fb.svg" alt="FaceBook" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/yt.svg" alt="YouTube" />
                       </a>
                     </li>
@@ -235,21 +237,17 @@
               </div>
             </div>
           </aside>
-          <main class="main-content">
-            <main>
-              <ul>
-                <li>
-                  <a href="/">Главная</a>
-                </li>
-              </ul>
+          <div class="flex-tpl-layout__right-col page__column">
+            <main class="main-content">
+              <main>
+                <ul>
+                  <li>
+                    <a href="/">Главная</a>
+                  </li>
+                </ul>
+              </main>
             </main>
-          </main>
-        </div>
-      </div>
-      <footer class="page-footer page__footer">
-        <div class="container">
-          <div class="grid-tpl-layout">
-            <div class="page-footer__column">
+            <footer class="page-footer page__footer">
               <div class="page-footer__service">
                 <p class="page-footer__text">© Бarashev 2015 — 2022</p>
               </div>
@@ -259,10 +257,10 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </footer>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
     <div class="hover-overlay" aria-label="Overlay hover"></div>
     <script src="js/custom.js"></script>

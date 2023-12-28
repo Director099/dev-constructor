@@ -37,8 +37,8 @@
                 <div class="burger__inner burger__inner--2"></div>
               </div>
             </a>
-            <div class="grid-tpl-layout">
-              <div class="page-header__logo-wrap">
+            <div class="flex-tpl-layout">
+              <div class="flex-tpl-layout__left-col">
                 <a class="logo" href="index.html">
                   <picture>
                     <source srcset="img/content/logo.svg" media="(min-width: 1230px)" />
@@ -46,19 +46,21 @@
                   </picture>
                 </a>
               </div>
-              <div class="page-header__row d-none d-xl-flex">
-                <form class="form page-header__search">
-                  <label class="field-text field-text--search js-field">
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" value="" name="search" placeholder="Поиск" />
-                      <button class="field-text__reset" type="reset" aria-label="Сброс"></button>
-                    </span>
-                  </label>
-                </form>
-                <div class="phone js-hover">
-                  <a class="phone__wrap phone__wrap--arrow" href="tel:+79175676767">
-                    <span class="phone__link phone__link--pd">+7 (917) 567-67-67</span>
-                  </a>
+              <div class="flex-tpl-layout__right-col">
+                <div class="page-header__row d-none d-xl-flex">
+                  <form class="form page-header__search">
+                    <label class="field-text field-text--search js-field">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" value="" name="search" placeholder="Поиск" />
+                        <button class="field-text__reset" type="reset" aria-label="Сброс"></button>
+                      </span>
+                    </label>
+                  </form>
+                  <div class="phone js-hover">
+                    <a class="phone__wrap phone__wrap--arrow" href="tel:+79175676767">
+                      <span class="phone__link phone__link--pd">+7 (917) 567-67-67</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -150,8 +152,8 @@
         </div>
       </header>
       <div class="container container--xs-p-none page__content">
-        <div class="grid-tpl-layout">
-          <aside class="sidebar d-none d-xl-block">
+        <div class="flex-tpl-layout page__grow">
+          <aside class="sidebar d-none d-xl-block flex-tpl-layout__left-col">
             <div class="sidebar__content">
               <ul class="nav-list">
                 <li class="nav-list__item">
@@ -196,37 +198,37 @@
                 <div class="contacts-info__wrap">
                   <ul class="socials">
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/tg.svg" alt="Телеграм" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/wp.svg" alt="WhatsApp" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/mail.svg" alt="Почта" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/inst.svg" alt="instagram" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/vk.svg" alt="ВКонтакте" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/fb.svg" alt="FaceBook" />
                       </a>
                     </li>
                     <li class="socials__item">
-                      <a class="socials__link">
+                      <a class="socials__link" href="#">
                         <img src="img/content-icon/yt.svg" alt="YouTube" />
                       </a>
                     </li>
@@ -235,336 +237,323 @@
               </div>
             </div>
           </aside>
-          <main class="main-content">
-            <section class="fragment" data-theme="1">
-              <div class="fragment__wrap" data-theme-children="1">
-                <h2 class="fragment__text" data-theme-text='1'>Добро пожаловать в мир Perfomance маркетинга</h2>
-                <style>
-                  [data-theme='1'] [data-theme-text='1']
-                  {
-                    color: var(--SystemWhite-Dark, #F5F5F7);
-                    text-align: center;
-                    /* Title 32 Semibold */
-                    font-family: SF Pro Display;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 36px;
-                    /* 112.5% */
-                    letter-spacing: 0.064px;
-                    width: 305.11px;
-                  }
-
-                  @media (min-width: 1230px)
-                  {
+          <div class="flex-tpl-layout__right-col page__column">
+            <main class="main-content">
+              <section class="fragment" data-theme="1">
+                <div class="fragment__wrap" data-theme-children="1">
+                  <h2 class="fragment__text" data-theme-text='1'>Добро пожаловать в мир Perfomance маркетинга</h2>
+                  <style>
                     [data-theme='1'] [data-theme-text='1']
                     {
                       color: var(--SystemWhite-Dark, #F5F5F7);
                       text-align: center;
-                      /* Title 48 Semibold */
+                      /* Title 32 Semibold */
                       font-family: SF Pro Display;
-                      font-size: 48px;
+                      font-size: 32px;
                       font-style: normal;
                       font-weight: 600;
-                      line-height: 52.01px;
-                      /* 108.354% */
-                      letter-spacing: -0.096px;
-                      width: 628.83px;
+                      line-height: 36px;
+                      /* 112.5% */
+                      letter-spacing: 0.064px;
+                      width: 305.11px;
                     }
-                  }
 
-                </style>
-                <p class="fragment__text" data-theme-text='2'>Превосходство в производительности</p>
-                <style>
-                  [data-theme='1'] [data-theme-text='2']
-                  {
-                    color: var(--systemWhite80-Dark, rgba(255, 255, 255, 0.80));
-                    text-align: center;
-                    /* Body 19 Regular */
-                    font-family: SF Pro Display;
-                    font-size: 19px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 23px;
-                    /* 121.053% */
-                    width: 207.085px;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='1'] [data-theme-text='1']
+                      {
+                        color: var(--SystemWhite-Dark, #F5F5F7);
+                        text-align: center;
+                        /* Title 48 Semibold */
+                        font-family: SF Pro Display;
+                        font-size: 48px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 52.01px;
+                        /* 108.354% */
+                        letter-spacing: -0.096px;
+                        width: 628.83px;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                  <p class="fragment__text" data-theme-text='2'>Превосходство в производительности</p>
+                  <style>
                     [data-theme='1'] [data-theme-text='2']
                     {
                       color: var(--systemWhite80-Dark, rgba(255, 255, 255, 0.80));
                       text-align: center;
-                      /* Body 24 Regular */
+                      /* Body 19 Regular */
                       font-family: SF Pro Display;
-                      font-size: 24px;
+                      font-size: 19px;
                       font-style: normal;
                       font-weight: 400;
-                      line-height: 28px;
-                      /* 116.667% */
-                      letter-spacing: 0.216px;
-                      width: initial;
+                      line-height: 23px;
+                      /* 121.053% */
+                      width: 207.085px;
                     }
-                  }
 
-                </style>
-                <style>
-                  [data-theme='1'] [data-theme-children='1']
-                  {
-                    display: flex;
-                    padding: 0px 15px;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 8px;
-                    align-self: stretch;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='1'] [data-theme-text='2']
+                      {
+                        color: var(--systemWhite80-Dark, rgba(255, 255, 255, 0.80));
+                        text-align: center;
+                        /* Body 24 Regular */
+                        font-family: SF Pro Display;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px;
+                        /* 116.667% */
+                        letter-spacing: 0.216px;
+                        width: initial;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                  <style>
                     [data-theme='1'] [data-theme-children='1']
                     {
                       display: flex;
+                      padding: 0px 15px;
                       flex-direction: column;
                       align-items: center;
                       gap: 8px;
                       align-self: stretch;
                     }
-                  }
 
-                </style>
-              </div>
-              <div class="fragment__wrap" data-theme-children="2">
-                <a class="btn-link" href="#">
-                  <span>Подробнее</span>
-                  <svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <style>
-                  [data-theme='1'] [data-theme-children='2']
-                  {
-                    display: flex;
-                    padding: 24px;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    gap: 32px;
-                    align-self: stretch;
-                    flex-wrap: wrap;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='1'] [data-theme-children='1']
+                      {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                        align-self: stretch;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                </div>
+                <div class="fragment__wrap" data-theme-children="2">
+                  <a class="btn-link" href="#">
+                    <span>Подробнее</span>
+                    <svg width="7" height="12">
+                      <use href="img/symbols.svg#icon-right"></use>
+                    </svg>
+                  </a>
+                  <style>
                     [data-theme='1'] [data-theme-children='2']
                     {
                       display: flex;
-                      padding: 24px 24px 32px 24px;
+                      padding: 24px;
                       justify-content: center;
                       align-items: center;
                       align-content: center;
-                      gap: 16px;
+                      gap: 32px;
                       align-self: stretch;
                       flex-wrap: wrap;
                     }
-                  }
 
-                </style>
-              </div>
-              <div class="fragment__wrap" data-theme-children="3">
-                <img class="fragment__img" src="img/content/marysya2.png" data-theme-img="1" alt="" />
-                <style>
-                  [data-theme='1'] [data-theme-img='1']
-                  {
-                    max-width: 181.002px;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='1'] [data-theme-children='2']
+                      {
+                        display: flex;
+                        padding: 24px 24px 32px 24px;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        gap: 16px;
+                        align-self: stretch;
+                        flex-wrap: wrap;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                </div>
+                <div class="fragment__wrap" data-theme-children="3">
+                  <img class="fragment__img" src="img/content/marysya2.png" data-theme-img="1" alt="" />
+                  <style>
                     [data-theme='1'] [data-theme-img='1']
                     {
-                      max-width: 227.694px;
+                      max-width: 181.002px;
                     }
-                  }
 
-                </style>
-                <style>
-                  [data-theme='1'] [data-theme-children='3']
-                  {
-                    display: flex;
-                    height: 262px;
-                    padding: 12px 10px 0px 10px;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 30px;
-                    flex-shrink: 0;
-                    align-self: stretch;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='1'] [data-theme-img='1']
+                      {
+                        max-width: 227.694px;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                  <style>
                     [data-theme='1'] [data-theme-children='3']
                     {
                       display: flex;
-                      height: 286px;
-                      padding: 24px 10px;
+                      height: 262px;
+                      padding: 12px 10px 0px 10px;
                       flex-direction: column;
                       align-items: center;
-                      gap: 10px;
+                      gap: 30px;
+                      flex-shrink: 0;
                       align-self: stretch;
                     }
-                  }
 
-                </style>
-              </div>
-              <style>
-                [data-theme='1']
-                {
-                  display: flex;
-                  padding-top: 181px;
-                  padding-bottom: 120px;
-                  flex-direction: column;
-                  align-items: center;
-                  background: var(--Cod-Gray, #101010);
-                }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='1'] [data-theme-children='3']
+                      {
+                        display: flex;
+                        height: 286px;
+                        padding: 24px 10px;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        align-self: stretch;
+                      }
+                    }
 
-                @media (min-width: 1230px)
-                {
+                  </style>
+                </div>
+                <style>
                   [data-theme='1']
                   {
                     display: flex;
-                    padding-top: 85px;
-                    padding-bottom: 0;
+                    padding-top: 181px;
+                    padding-bottom: 120px;
                     flex-direction: column;
                     align-items: center;
-                    border-radius: 8px;
-                    background: var(--SystemBlack, #121212);
-                  }
-                }
-
-              </style>
-            </section>
-            <section class="fragment" data-theme="2">
-              <div class="fragment__wrap" data-theme-children="1">
-                <h2 class="fragment__text" data-theme-text='1'>Сайт-приложение</h2>
-                <style>
-                  [data-theme='2'] [data-theme-text='1']
-                  {
-                    color: var(--Cod-Gray, #101010);
-                    text-align: center;
-                    /* Title 32 Semibold */
-                    font-family: SF Pro Display;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 36px;
-                    /* 112.5% */
-                    letter-spacing: 0.064px;
+                    background: var(--Cod-Gray, #101010);
                   }
 
                   @media (min-width: 1230px)
                   {
+                    [data-theme='1']
+                    {
+                      display: flex;
+                      padding-top: 85px;
+                      padding-bottom: 0;
+                      flex-direction: column;
+                      align-items: center;
+                      border-radius: 8px;
+                      background: var(--SystemBlack, #121212);
+                    }
+                  }
+
+                </style>
+              </section>
+              <section class="fragment" data-theme="2">
+                <div class="fragment__wrap" data-theme-children="1">
+                  <h2 class="fragment__text" data-theme-text='1'>Сайт-приложение</h2>
+                  <style>
                     [data-theme='2'] [data-theme-text='1']
                     {
-                      color: var(--SystemBlack, #121212);
+                      color: var(--Cod-Gray, #101010);
                       text-align: center;
-                      /* Big Title (S) */
+                      /* Title 32 Semibold */
                       font-family: SF Pro Display;
-                      font-size: 48px;
+                      font-size: 32px;
                       font-style: normal;
                       font-weight: 600;
-                      line-height: 52px;
-                      /* 108.333% */
-                      letter-spacing: -0.096px;
+                      line-height: 36px;
+                      /* 112.5% */
+                      letter-spacing: 0.064px;
                     }
-                  }
 
-                </style>
-                <p class="fragment__text" data-theme-text='2'>Супербыстрый, интуитивно понятный интерфейсы с феноменальной производительностью.</p>
-                <style>
-                  [data-theme='2'] [data-theme-text='2']
-                  {
-                    color: var(--Cod-Gray, #101010);
-                    text-align: center;
-                    /* Body 19 Regular */
-                    font-family: SF Pro Display;
-                    font-size: 19px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 23px;
-                    /* 121.053% */
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='2'] [data-theme-text='1']
+                      {
+                        color: var(--SystemBlack, #121212);
+                        text-align: center;
+                        /* Big Title (S) */
+                        font-family: SF Pro Display;
+                        font-size: 48px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 52px;
+                        /* 108.333% */
+                        letter-spacing: -0.096px;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                  <p class="fragment__text" data-theme-text='2'>Супербыстрый, интуитивно понятный интерфейсы с феноменальной производительностью.</p>
+                  <style>
                     [data-theme='2'] [data-theme-text='2']
                     {
-                      color: var(--SystemBlack, #121212);
+                      color: var(--Cod-Gray, #101010);
                       text-align: center;
-                      /* Title 24 (R) */
+                      /* Body 19 Regular */
                       font-family: SF Pro Display;
-                      font-size: 24px;
+                      font-size: 19px;
                       font-style: normal;
                       font-weight: 400;
-                      line-height: 28px;
-                      /* 116.667% */
-                      letter-spacing: 0.216px;
+                      line-height: 23px;
+                      /* 121.053% */
                     }
-                  }
 
-                </style>
-                <style>
-                  [data-theme='2'] [data-theme-children='1']
-                  {
-                    display: flex;
-                    padding: 0px 15px;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 6px;
-                    align-self: stretch;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='2'] [data-theme-text='2']
+                      {
+                        color: var(--SystemBlack, #121212);
+                        text-align: center;
+                        /* Title 24 (R) */
+                        font-family: SF Pro Display;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px;
+                        /* 116.667% */
+                        letter-spacing: 0.216px;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                  <style>
                     [data-theme='2'] [data-theme-children='1']
                     {
                       display: flex;
-                      padding: 0px 173px;
+                      padding: 0px 15px;
                       flex-direction: column;
                       align-items: center;
                       gap: 6px;
                       align-self: stretch;
                     }
-                  }
 
-                </style>
-              </div>
-              <div class="fragment__wrap" data-theme-children="2">
-                <a class="btn-link" href="#">
-                  <span>Презентация</span>
-                  <svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <a class="btn btn--primary-border" href="#">Презентация<svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <style>
-                  [data-theme='2'] [data-theme-children='2']
-                  {
-                    display: flex;
-                    padding: 24px 24px 32px 24px;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    gap: 14px 16px;
-                    align-self: stretch;
-                    flex-wrap: wrap;
-                  }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='2'] [data-theme-children='1']
+                      {
+                        display: flex;
+                        padding: 0px 173px;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 6px;
+                        align-self: stretch;
+                      }
+                    }
 
-                  @media (min-width: 1230px)
-                  {
+                  </style>
+                </div>
+                <div class="fragment__wrap" data-theme-children="2">
+                  <a class="btn-link" href="#">
+                    <span>Презентация</span>
+                    <svg width="7" height="12">
+                      <use href="img/symbols.svg#icon-right"></use>
+                    </svg>
+                  </a>
+                  <a class="btn btn--primary-border" href="#">Презентация<svg width="7" height="12">
+                      <use href="img/symbols.svg#icon-right"></use>
+                    </svg>
+                  </a>
+                  <style>
                     [data-theme='2'] [data-theme-children='2']
                     {
                       display: flex;
@@ -576,174 +565,185 @@
                       align-self: stretch;
                       flex-wrap: wrap;
                     }
-                  }
 
-                </style>
-              </div>
-              <div class="fragment__wrap" data-theme-children="3">
-                <img class="fragment__img" src="img/content/site-applicationpng.png" alt="" />
-              </div>
-              <style>
-                [data-theme='2']
-                {
-                  display: flex;
-                  padding-top: 132px;
-                  flex-direction: column;
-                  align-items: center;
-                  background: var(--Linear-Sky, linear-gradient(180deg, #F5F5F7 0%, #BED1D9 100%));
-                }
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='2'] [data-theme-children='2']
+                      {
+                        display: flex;
+                        padding: 24px 24px 32px 24px;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                        gap: 14px 16px;
+                        align-self: stretch;
+                        flex-wrap: wrap;
+                      }
+                    }
 
-                @media (min-width: 1230px)
-                {
+                  </style>
+                </div>
+                <div class="fragment__wrap" data-theme-children="3">
+                  <img class="fragment__img" src="img/content/site-applicationpng.png" alt="" />
+                </div>
+                <style>
                   [data-theme='2']
                   {
                     display: flex;
-                    padding-top: 85px;
+                    padding-top: 132px;
                     flex-direction: column;
                     align-items: center;
-                    border-radius: 8px;
-                    background: linear-gradient(180deg, #F5F5F7 0%, #BED1D9 100%);
-                  }
-                }
-
-              </style>
-            </section>
-            <section class="fragment" data-theme="3">
-              <a class="fragment__background" href="#">
-                <video playsinline="" autoplay="" muted="muted" loop="loop">
-                  <source src="https://barashev.com/image/video/Barashev.mp4" />
-                </video>
-              </a>
-              <style>
-                [data-theme='3']
-                {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  background: #121212;
-                  height: 500px
-                }
-
-                @media (min-width: 1230px)
-                {
-                  [data-theme='3']
-                  {
-                    border-radius: 8px;
-                  }
-                }
-
-              </style>
-            </section>
-            <section class="fragment" data-theme="4">
-              <a class="fragment__background" href="#">
-                <img src="img/content/bg-picture.jpg" alt="" />
-              </a>
-              <div class="fragment__wrap" data-theme-children="1">
-                <h2 class="fragment__text" data-theme-text='1'>Кликабельный задний фон и виды кнопок</h2>
-                <style>
-                  [data-theme='4'] [data-theme-text='1']
-                  {
-                    color: var(--SystemWhite-Dark, #000);
-                    width: 250px;
-                    text-align: center;
-                    /* Title 32 Semibold */
-                    font-family: SF Pro Display;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 36px;
-                    /* 112.5% */
-                    letter-spacing: 0.064px;
+                    background: var(--Linear-Sky, linear-gradient(180deg, #F5F5F7 0%, #BED1D9 100%));
                   }
 
                   @media (min-width: 1230px)
                   {
-                    [data-theme='4'] [data-theme-text='1']
+                    [data-theme='2']
                     {
-                      width: 450px;
+                      display: flex;
+                      padding-top: 85px;
+                      flex-direction: column;
+                      align-items: center;
+                      border-radius: 8px;
+                      background: linear-gradient(180deg, #F5F5F7 0%, #BED1D9 100%);
                     }
                   }
 
                 </style>
+              </section>
+              <section class="fragment" data-theme="3">
+                <a class="fragment__background" href="#">
+                  <video playsinline="" autoplay="" muted="muted" loop="loop">
+                    <source src="https://barashev.com/image/video/Barashev.mp4" />
+                  </video>
+                </a>
                 <style>
-                  [data-theme='4'] [data-theme-children='1']
+                  [data-theme='3']
                   {
                     display: flex;
-                    padding: 0px 15px;
                     flex-direction: column;
                     align-items: center;
-                    gap: 8px;
-                    align-self: stretch;
+                    background: #121212;
+                    height: 500px
                   }
 
-                </style>
-              </div>
-              <div class="fragment__wrap" data-theme-children="2">
-                <a class="btn btn--primary" href="#">
-                  <span>Подробнее</span>
-                </a>
-                <a class="btn btn--primary-border" href="#">
-                  <span>Презентация</span>
-                  <svg width="18" height="18">
-                    <use href="img/symbols.svg#icon-play"></use>
-                  </svg>
-                </a>
-                <a class="btn-link btn-link--m-size" href="#">Презентация<svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <a class="btn-link" href="#">
-                  <span>Презентация</span>
-                  <svg width="7" height="12">
-                    <use href="img/symbols.svg#icon-right"></use>
-                  </svg>
-                </a>
-                <style>
-                  [data-theme='4'] [data-theme-children='2']
+                  @media (min-width: 1230px)
                   {
-                    display: flex;
-                    padding: 24px 24px 32px 24px;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    gap: 14px 16px;
-                    align-self: stretch;
-                    flex-wrap: wrap;
-                    gap: 20px;
+                    [data-theme='3']
+                    {
+                      border-radius: 8px;
+                    }
                   }
 
                 </style>
-              </div>
-              <style>
-                [data-theme='4']
-                {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  justify-content: center;
-                  background: #121212;
-                  height: 500px;
-                  padding-top: 100px;
-                  padding-bottom: 100px;
-                }
+              </section>
+              <section class="fragment" data-theme="4">
+                <a class="fragment__background" href="#">
+                  <img src="img/content/bg-picture.jpg" alt="" />
+                </a>
+                <div class="fragment__wrap" data-theme-children="1">
+                  <h2 class="fragment__text" data-theme-text='1'>Кликабельный задний фон и виды кнопок</h2>
+                  <style>
+                    [data-theme='4'] [data-theme-text='1']
+                    {
+                      color: var(--SystemWhite-Dark, #000);
+                      width: 250px;
+                      text-align: center;
+                      /* Title 32 Semibold */
+                      font-family: SF Pro Display;
+                      font-size: 32px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 36px;
+                      /* 112.5% */
+                      letter-spacing: 0.064px;
+                    }
 
-                @media (min-width: 1230px)
-                {
+                    @media (min-width: 1230px)
+                    {
+                      [data-theme='4'] [data-theme-text='1']
+                      {
+                        width: 450px;
+                      }
+                    }
+
+                  </style>
+                  <style>
+                    [data-theme='4'] [data-theme-children='1']
+                    {
+                      display: flex;
+                      padding: 0px 15px;
+                      flex-direction: column;
+                      align-items: center;
+                      gap: 8px;
+                      align-self: stretch;
+                    }
+
+                  </style>
+                </div>
+                <div class="fragment__wrap" data-theme-children="2">
+                  <a class="btn btn--primary" href="#">
+                    <span>Подробнее</span>
+                  </a>
+                  <a class="btn btn--primary-border" href="#">
+                    <span>Презентация</span>
+                    <svg width="18" height="18">
+                      <use href="img/symbols.svg#icon-play"></use>
+                    </svg>
+                  </a>
+                  <a class="btn-link btn-link--m-size" href="#">
+                    <span>Презентация</span>
+                    <svg width="7" height="12">
+                      <use href="img/symbols.svg#icon-right"></use>
+                    </svg>
+                  </a>
+                  <a class="btn-link" href="#">
+                    <span>Презентация</span>
+                    <svg width="7" height="12">
+                      <use href="img/symbols.svg#icon-right"></use>
+                    </svg>
+                  </a>
+                  <style>
+                    [data-theme='4'] [data-theme-children='2']
+                    {
+                      display: flex;
+                      padding: 24px 24px 32px 24px;
+                      justify-content: center;
+                      align-items: center;
+                      align-content: center;
+                      gap: 14px 16px;
+                      align-self: stretch;
+                      flex-wrap: wrap;
+                      gap: 20px;
+                    }
+
+                  </style>
+                </div>
+                <style>
                   [data-theme='4']
                   {
-                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background: #121212;
+                    height: 500px;
+                    padding-top: 100px;
+                    padding-bottom: 100px;
                   }
-                }
 
-              </style>
-            </section>
-          </main>
-        </div>
-      </div>
-      <footer class="page-footer page__footer">
-        <div class="container">
-          <div class="grid-tpl-layout">
-            <div class="page-footer__column">
+                  @media (min-width: 1230px)
+                  {
+                    [data-theme='4']
+                    {
+                      border-radius: 8px;
+                    }
+                  }
+
+                </style>
+              </section>
+            </main>
+            <footer class="page-footer page__footer">
               <div class="page-footer__service">
                 <p class="page-footer__text">© Бarashev 2015 — 2022</p>
               </div>
@@ -753,10 +753,10 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </footer>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
     <div class="hover-overlay" aria-label="Overlay hover"></div>
     <script src="js/custom.js"></script>

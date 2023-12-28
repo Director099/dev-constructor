@@ -5,24 +5,25 @@ mixin page-header({})
     .container
       .page-header__xs-row
         +burger('Меню').d-xl-none.page-header__burger
-        .grid-tpl-layout
-          .page-header__logo-wrap
+        .flex-tpl-layout
+          .flex-tpl-layout__left-col
             +logo('index.html')
               picture
                 source(srcset='img/content/logo.svg' media=`(min-width: ${mediaSize.xl}px)`)
                 img(src='img/content/logo-mobile.svg', alt='Логотип')
-          .page-header__row.d-none.d-xl-flex
-            +form.page-header__search
-              +field-text({
-                mods: '',
-                val: '',
-                attrs: {
-                  name: 'search',
-                  placeholder: 'Поиск'
-                }
-              }).field-text--search.js-field
-                button.field-text__reset(type="reset" aria-label="Сброс")
-            +phone.js-hover
+          .flex-tpl-layout__right-col
+            .page-header__row.d-none.d-xl-flex
+              +form.page-header__search
+                +field-text({
+                  mods: '',
+                  val: '',
+                  attrs: {
+                    name: 'search',
+                    placeholder: 'Поиск'
+                  }
+                }).field-text--search.js-field
+                  button.field-text__reset(type="reset" aria-label="Сброс")
+              +phone.js-hover
       .submenu
         .submenu__content
           +contact-group

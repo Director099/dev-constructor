@@ -280,6 +280,10 @@ template {
     display:     grid;
     gap: 30px;
 }
+.flex-tpl-layout {
+    display: flex;
+    gap: 30px;
+}
 .d-none {
     display: none !important;
 }
@@ -333,6 +337,17 @@ template {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.32s cubic-bezier(0.4, 0, 0.6, 1) 80ms, visibility 0.32s step-start 80ms;
+}
+.nav-open .phone__wrap--arrow::after {
+    transform: rotate(-135deg);
+}
+.container {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .btn {
     font-family: "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -487,7 +502,16 @@ a.btn--disabled {
     flex-direction: column;
 }
 .page__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding-top: 48px;
+}
+.page__column {
+    display: flex;
+    flex-direction: column;
+}
+.page__grow {
     flex-grow: 1;
 }
 .page__footer {
@@ -748,14 +772,6 @@ textarea.field-text__input {
     border-radius: 3.45306px;
     padding: 12px 16px;
 }
-.container {
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
 .fragment {
     position: relative;
     z-index: 1;
@@ -788,6 +804,7 @@ textarea.field-text__input {
 .main-content {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 .contact-group {
     display: flex;
@@ -823,14 +840,6 @@ textarea.field-text__input {
     position: relative;
     display: inline-block;
     color: hsl(0, 0%, 0%);
-}
-.phone:hover .phone__wrap--arrow::after {
-    transform: rotate(-135deg);
-}
-.phone:hover .phone__drop {
-    visibility: visible;
-    opacity: 1;
-    z-index: 9;
 }
 .phone__wrap {
     display: flex;
@@ -1233,6 +1242,13 @@ textarea.field-text__input {
         -ms-grid-columns: 270px 1fr;
         grid-template-columns: 270px 1fr;
     }
+    .flex-tpl-layout__left-col {
+        width: 270px;
+        flex-shrink: 0;
+    }
+    .flex-tpl-layout__right-col {
+        flex-grow: 1;
+    }
     .d-xl-none {
         display: none !important;
     }
@@ -1241,6 +1257,9 @@ textarea.field-text__input {
     }
     .d-xl-flex {
         display: flex !important;
+    }
+    .container {
+        width: 1200px;
     }
     .page__content {
         padding-top: 72px;
@@ -1255,9 +1274,6 @@ textarea.field-text__input {
     .field-text__input {
         padding-left: 0;
         padding-right: 0;
-    }
-    .container {
-        width: 1200px;
     }
     .main-content {
         gap: var(--xl-gap-main-content);

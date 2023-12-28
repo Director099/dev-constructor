@@ -2,16 +2,6 @@
   position: relative;
   display: inline-block;
   color: $black;
-
-  &:hover .phone__wrap--arrow::after {
-    transform: rotate(-135deg);
-  }
-
-  &:hover .phone__drop {
-    visibility: visible;
-    opacity: 1;
-    z-index: 9;
-  }
 }
 
 .phone__wrap {

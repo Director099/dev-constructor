@@ -42,12 +42,13 @@ html.page(lang='ru')
     .page__inner
       +page-header({})
       .container.container--xs-p-none.page__content
-        .grid-tpl-layout
-          +sidebar
-          main.main-content
-            block content
-              p содержимое страницы
-      +page-footer.page__footer
+        .flex-tpl-layout.page__grow
+          +sidebar.flex-tpl-layout__left-col
+          .flex-tpl-layout__right-col.page__column
+            main.main-content
+              block content
+                p содержимое страницы
+            +page-footer.page__footer
     .hover-overlay(aria-label="Overlay hover")
     block page-bottom
       script(src='js/custom.js')
