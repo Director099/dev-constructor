@@ -1,0 +1,46 @@
+.contact-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-right: 15px;
+}
+
+.contact-group__header {
+  @include subheadings;
+  color: #666;
+}
+
+.contact-group__messengers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-group__link {
+  display: inline-flex;
+  align-items: center;
+  color: $systemWhite80Dark;
+  gap: 8px;
+  text-decoration: none;
+
+  &:not(.contact-group__link--no-border) span {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: $systemWhite80Dark;
+    }
+  }
+
+  img {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+  }
+}

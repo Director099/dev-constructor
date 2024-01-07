@@ -18,7 +18,11 @@
     }) {
       this._elemHover = document.querySelector(elemHover);
       this.mediaXl = window.matchMedia(`(min-width: ${mediaXl}px)`).matches;
-      if (!!elemHover && this.mediaXl) {
+      this.classNames = {
+        Body: 'nav-open',
+        Active: 'active'
+      };
+      if (!!elemHover) {
         this._hoverHolding = document.querySelector(hoverHolding);
         this._listMenu = this._hoverHolding.querySelector(showContent);
         this.body = document.body;
@@ -26,18 +30,23 @@
       }
     }
     showBlurOverlay() {
-      this.body.classList.add('nav-open');
+      this.body.classList.add(this.classNames.Body);
     }
     hideBlurOverlay() {
-      this.body.classList.remove('nav-open');
+      this.body.classList.remove(this.classNames.Body);
     }
     show() {
-      this._listMenu.style.height = this._listMenu.scrollHeight + 'px';
+      if (this.mediaXl) this._listMenu.style.height = this._listMenu.scrollHeight + 'px';
+      this._elemHover.classList.add(this.classNames.Active);
       this.showBlurOverlay();
     }
     hidden() {
-      this._listMenu.style.height = "0";
+      if (this.mediaXl) this._listMenu.style.height = "0";
+      this._elemHover.classList.remove(this.classNames.Active);
       this.hideBlurOverlay();
+    }
+    toggleMenu() {
+      this.body.classList.contains(this.classNames.Body) ? this.hidden() : this.show();
     }
     handleMouseover() {
       this._elemHover.addEventListener('mouseover', () => this.show());
@@ -45,87 +54,24 @@
     handleMouseleave() {
       this._hoverHolding.addEventListener('mouseleave', () => this.hidden());
     }
+    handleClick() {
+      this._hoverHolding.addEventListener('click', () => this.toggleMenu());
+    }
     _events() {
-      this.handleMouseover();
-      this.handleMouseleave();
+      if (this.mediaXl) {
+        this.handleMouseover();
+        this.handleMouseleave();
+      } else {
+        this.handleClick();
+      }
     }
     _init() {
       this._events();
     }
   }
 
-  class mbMenu {
-    constructor({
-      menu,
-      burger,
-      toggleClassNameBody,
-      timeoutDuration
-    }) {
-      this.menu = document.querySelector(menu);
-      this.burger = document.querySelector(burger);
-      this.mainMenu = this.menu.querySelector('.mb-menu__list');
-      this.subItem = this.menu.querySelectorAll('[data-sub-item]');
-      this.menuBack = this.menu.querySelector("[data-menu-back]");
-      this.bindingSubItem = this.menu.querySelectorAll('[data-binding-sub-item]');
-      this.toggleClassNameBody = toggleClassNameBody;
-      this.timeoutDuration = timeoutDuration;
-      this.NAME_CLASS = {
-        hiddenMenu: 'visibility-hidden'
-      };
-      this._init();
-    }
-    hiddenMainMenu() {
-      this.mainMenu.classList.add(this.NAME_CLASS.hiddenMenu);
-    }
-    showMainMenu() {
-      this.mainMenu.classList.remove(this.NAME_CLASS.hiddenMenu);
-    }
-    hiddenMenuBack() {
-      this.menuBack.classList.add(this.NAME_CLASS.hiddenMenu);
-    }
-    showMenuBack() {
-      this.menuBack.classList.remove(this.NAME_CLASS.hiddenMenu);
-    }
-    toggleBurger() {
-      this.burger.classList.toggle('active');
-      document.body.classList.toggle(this.toggleClassNameBody);
-    }
-    showSubItem(e) {
-      e.preventDefault();
-      const bindingSubItem = this.menu.querySelector(`[data-binding-sub-item="${e.target.dataset.subItem}"]`);
-      this.hiddenMainMenu();
-      setTimeout(() => {
-        this.showMenuBack();
-        bindingSubItem.classList.remove(this.NAME_CLASS.hiddenMenu);
-      }, this.timeoutDuration);
-    }
-    resetSubMenu(time = this.timeoutDuration) {
-      this.bindingSubItem.forEach(elem => elem.classList.add(this.NAME_CLASS.hiddenMenu));
-      this.hiddenMenuBack();
-      setTimeout(() => this.showMainMenu(), time);
-    }
-    closeMenu() {
-      this.toggleBurger();
-      this.resetSubMenu(400);
-    }
-    _events() {
-      this.subItem.forEach(elem => elem.addEventListener('click', e => this.showSubItem(e)));
-      this.menuBack.addEventListener('click', () => this.resetSubMenu());
-      this.burger.addEventListener('click', () => this.closeMenu());
-    }
-    _init() {
-      this._events();
-    }
-  }
-
-  new mbMenu({
-    menu: '.mb-menu',
-    burger: '.burger',
-    toggleClassNameBody: 'show-open',
-    timeoutDuration: 200
-  });
   new hoverMenu({
-    elemHover: '.js-hover',
+    elemHover: '[data-hover-menu]',
     hoverHolding: '.page-header',
     showContent: '.submenu',
     mediaXl: MediaSize.XL

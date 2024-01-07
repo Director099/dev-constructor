@@ -1,37 +1,8 @@
-mixin socials()
-  -
-    const list = [
-      {
-        img: 'tg',
-        alt: 'Телеграм'
-      },
-      {
-        img: 'wp',
-        alt: 'WhatsApp'
-      },
-      {
-        img: 'mail',
-        alt: 'Почта'
-      },
-      {
-        img: 'inst',
-        alt: 'instagram'
-      },
-      {
-        img: 'vk',
-        alt: 'ВКонтакте'
-      },
-      {
-        img: 'fb',
-        alt: 'FaceBook'
-      },
-      {
-        img: 'yt',
-        alt: 'YouTube'
-      },
-    ];
+include ./mock
+
+mixin socials
   ul.socials
-    each item in list
+    each item in listSocials
       li.socials__item
         a.socials__link(href="#")
           img(src=`img/content-icon/${item.img}.svg` alt=item.alt)

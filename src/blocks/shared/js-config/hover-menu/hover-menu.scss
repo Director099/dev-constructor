@@ -21,6 +21,31 @@
   transition: opacity .32s cubic-bezier(.4,0,.6,1) 80ms,visibility .32s step-start 80ms
 }
 
-.nav-open .phone__wrap--arrow::after {
-  transform: rotate(-135deg);
+//Стили для события клика
+.nav-open {
+  @media (max-width: $screen-xl - 1) {
+    overflow: hidden;
+
+    .submenu {
+      height: 100dvh;
+    }
+
+    .submenu__content {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0);
+    }
+
+    @media (max-width: $screen-xl - 1) {
+      .page-header {
+        background: #161617;
+      }
+
+      .logo {
+        position: relative;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  }
 }

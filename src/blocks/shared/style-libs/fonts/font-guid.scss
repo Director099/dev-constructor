@@ -5,6 +5,13 @@
   letter-spacing: -0.24px;
 }
 
+@mixin body21Semibold {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0.231px;
+}
+
 @mixin body15Semibold {
   font-size: 15px;
   font-weight: 600;

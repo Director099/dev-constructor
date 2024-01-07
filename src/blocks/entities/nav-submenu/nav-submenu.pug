@@ -1,0 +1,11 @@
+include mock
+
+mixin nav-submenu
+  .nav-submenu
+    each item in navSubmenu
+      section.nav-submenu__item
+        h3.nav-submenu__title= item.title
+        ul.nav-submenu__list
+          each elemNav in item.list
+            li.nav-submenu__item
+              a.nav-submenu__link(href="#")= elemNav

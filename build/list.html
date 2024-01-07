@@ -29,15 +29,7 @@
       <header class="page-header page__header">
         <div class="container">
           <div class="page-header__xs-row">
-            <a class="burger d-xl-none page-header__burger" aria-label="Меню">
-              <div class="burger__line burger__line--1">
-                <div class="burger__inner burger__inner--1"></div>
-              </div>
-              <div class="burger__line burger__line--2">
-                <div class="burger__inner burger__inner--2"></div>
-              </div>
-            </a>
-            <div class="flex-tpl-layout">
+            <div class="flex-tpl-layout page-header__layout-center">
               <div class="flex-tpl-layout__left-col">
                 <a class="logo" href="index.html">
                   <picture>
@@ -47,196 +39,108 @@
                 </a>
               </div>
               <div class="flex-tpl-layout__right-col">
-                <div class="page-header__row d-none d-xl-flex">
-                  <form class="form page-header__search">
-                    <label class="field-text field-text--search js-field">
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" value="" name="search" placeholder="Поиск" />
-                        <button class="field-text__reset" type="reset" aria-label="Сброс"></button>
-                      </span>
-                    </label>
-                  </form>
-                  <div class="phone js-hover">
-                    <a class="phone__wrap phone__wrap--arrow" href="tel:+79175676767">
-                      <span class="phone__link phone__link--pd">+7 (917) 567-67-67</span>
-                    </a>
-                  </div>
+                <div class="page-header__row">
+                  <a class="burger page-header__burger" aria-label="Меню" data-hover-menu="">
+                    <div class="burger__line burger__line--1">
+                      <div class="burger__inner burger__inner--1"></div>
+                    </div>
+                    <div class="burger__line burger__line--2">
+                      <div class="burger__inner burger__inner--2"></div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div class="submenu">
             <div class="submenu__content">
-              <div class="contact-group">
-                <div class="contact-group__header">
-                  <span>Мессенджеры</span>
+              <div class="submenu__nav-tpl">
+                <div class="nav-submenu">
+                  <section class="nav-submenu__item">
+                    <h3 class="nav-submenu__title">О нас</h3>
+                    <ul class="nav-submenu__list">
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Агентство</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Вакансии</a>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="nav-submenu__item">
+                    <h3 class="nav-submenu__title">Кейсы</h3>
+                    <ul class="nav-submenu__list">
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Сфера услуг</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Производство</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Бьюти</a>
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="nav-submenu__item">
+                    <h3 class="nav-submenu__title">Услуги</h3>
+                    <ul class="nav-submenu__list">
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Маркетинг</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Интерфейсы</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Реклама</a>
+                      </li>
+                      <li class="nav-submenu__item">
+                        <a class="nav-submenu__link" href="#">Поддержка</a>
+                      </li>
+                    </ul>
+                  </section>
                 </div>
-                <a class="contact-group__link" href="#">
-                  <img src="img/content-icon/phone.svg" alt="Иконка" />
-                  <span>+7 (917) 567-67-68</span>
-                </a>
-                <a class="contact-group__link" href="#">
-                  <img src="img/content-icon/wp.svg" alt="Иконка" />
-                  <span>+7 (917) 567-67-68</span>
-                </a>
-                <a class="contact-group__link" href="#">
-                  <img src="img/content-icon/tg.svg" alt="Иконка" />
-                  <span>@pplans</span>
-                </a>
-                <a class="contact-group__link" href="#">
-                  <img src="img/content-icon/mail.svg" alt="Иконка" />
-                  <span>ivan@barashev.com</span>
-                </a>
+                <div class="contact-group">
+                  <div class="contact-group__messengers">
+                    <a class="contact-group__link contact-group__link--no-border" href="tel:+79175676767">
+                      <span>+7 (917) 567-67-67</span>
+                    </a>
+                    <a class="contact-group__link contact-group__link--no-border" href="mailto:ivan@barashev.com">
+                      <span>ivan@barashev.com</span>
+                    </a>
+                    <a class="contact-group__link" href="https://t.me/pplans" target="_blank">
+                      <span>Telegram</span>
+                    </a>
+                    <a class="contact-group__link" href="https://wa.me/79374700900" target="_blank">
+                      <span>WhatsApp</span>
+                    </a>
+                  </div>
+                  <div class="contact-group__socials">
+                    <ul class="socials">
+                      <li class="socials__item">
+                        <a class="socials__link" href="#">
+                          <img src="img/content-icon/inst.svg" alt="instagram" />
+                        </a>
+                      </li>
+                      <li class="socials__item">
+                        <a class="socials__link" href="#">
+                          <img src="img/content-icon/vk.svg" alt="ВКонтакте" />
+                        </a>
+                      </li>
+                      <li class="socials__item">
+                        <a class="socials__link" href="#">
+                          <img src="img/content-icon/yt.svg" alt="YouTube" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="mb-menu">
-          <div class="mb-menu__content">
-            <div class="mb-menu__wrap">
-              <button class="mb-menu__close visibility-hidden" type="button" aria-label="Вернуться в главное меню" data-menu-back="">
-                <svg width="7" height="12">
-                  <use href="img/symbols.svg#icon-right"></use>
-                </svg>
-              </button>
-              <ul class="mb-menu__list">
-                <li class="mb-menu__item">
-                  <a class="mb-menu__link active" href="#" data-sub-item="1">Отдел маркетинга</a>
-                </li>
-                <li class="mb-menu__item">
-                  <a class="mb-menu__link" href="#" data-sub-item="2">Сайт приложение</a>
-                </li>
-                <li class="mb-menu__item">
-                  <a class="mb-menu__link" href="#" data-sub-item="2">Умная реклама</a>
-                </li>
-                <li class="mb-menu__item">
-                  <a class="mb-menu__link" href="#" data-sub-item="2">Контакты</a>
-                </li>
-              </ul>
-              <ul class="mb-menu__sub-list visibility-hidden" data-binding-sub-item="1">
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт один</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт два</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт три</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт четыре</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт пять</a>
-                </li>
-              </ul>
-              <ul class="mb-menu__sub-list visibility-hidden" data-binding-sub-item="2">
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт один</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт два</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт три</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт четыре</a>
-                </li>
-                <li class="mb-menu__sub-item">
-                  <a class="mb-menu__link" href="#">Подпункт пять</a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </header>
       <div class="container container--xs-p-none page__content">
         <div class="flex-tpl-layout page__grow">
-          <aside class="sidebar d-none d-xl-block flex-tpl-layout__left-col">
-            <div class="sidebar__content">
-              <ul class="nav-list">
-                <li class="nav-list__item">
-                  <a class="nav-list__link active" href="#">Отдел маркетинга</a>
-                </li>
-                <li class="nav-list__item">
-                  <a class="nav-list__link" href="#">Сайт приложение</a>
-                </li>
-                <li class="nav-list__item">
-                  <a class="nav-list__link" href="#">Умная реклама</a>
-                </li>
-                <li class="nav-list__item">
-                  <button class="nav-list__arrow" aria-label="Расскрыть меню" data-toggle-nav-list=""></button>
-                  <a class="nav-list__link" href="#">Контакты</a>
-                  <ul class="nav-list__sub-item collapse__wrap">
-                    <li class="nav-list__item collapse">
-                      <a class="nav-list__link" href="#">ГОСТ</a>
-                    </li>
-                    <li class="nav-list__item">
-                      <a class="nav-list__link" href="#">Каучуковые кольца</a>
-                    </li>
-                    <li class="nav-list__item">
-                      <a class="nav-list__link" href="#">Фторкаучуковые кольца</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="contacts-info">
-                <header class="contacts-info__wrap">
-                  <a class="contacts-info__header-link" href="#">
-                    <div class="contacts-info__img">
-                      <img src="img/content/we-are-online.png" />
-                    </div>
-                    <section class="contacts-info__content">
-                      <h2 class="contacts-info__title">barashev.com</h2>
-                      <div class="contacts-info__desc">
-                        <p>performance-маркетинг</p>
-                      </div>
-                    </section>
-                  </a>
-                </header>
-                <div class="contacts-info__wrap">
-                  <ul class="socials">
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/tg.svg" alt="Телеграм" />
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/wp.svg" alt="WhatsApp" />
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/mail.svg" alt="Почта" />
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/inst.svg" alt="instagram" />
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/vk.svg" alt="ВКонтакте" />
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/fb.svg" alt="FaceBook" />
-                      </a>
-                    </li>
-                    <li class="socials__item">
-                      <a class="socials__link" href="#">
-                        <img src="img/content-icon/yt.svg" alt="YouTube" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </aside>
           <div class="flex-tpl-layout__right-col page__column">
             <main class="main-content">
               <main>

@@ -9,7 +9,9 @@
 
 .flex-tpl-layout {
   display: flex;
-  gap: 30px;
+  @media (min-width: $screen-xl) {
+    gap: 30px;
+  }
 }
 
 .flex-tpl-layout__left-col {

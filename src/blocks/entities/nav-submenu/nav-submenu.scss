@@ -1,0 +1,29 @@
+.nav-submenu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @media (min-width: $screen-xl) {
+    flex-direction: row;
+    gap: 20px 110px;
+  }
+}
+
+.nav-submenu__title {
+  color: $jumbo;
+  margin-bottom: 12px;
+  @include body13Regular;
+}
+
+.nav-submenu__list {
+  @include ul-none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-submenu__link {
+  color: $systemWhite80Dark;
+  @include body21Semibold;
+}

@@ -8,7 +8,12 @@ export class hoverMenu {
     this._elemHover = document.querySelector(elemHover);
     this.mediaXl = window.matchMedia(`(min-width: ${mediaXl}px)`).matches;
 
-    if (!!elemHover && this.mediaXl) {
+    this.classNames = {
+      Body: 'nav-open',
+      Active: 'active',
+    }
+
+    if (!!elemHover) {
       this._hoverHolding = document.querySelector(hoverHolding);
       this._listMenu = this._hoverHolding.querySelector(showContent);
       this.body = document.body;
@@ -17,21 +22,27 @@ export class hoverMenu {
   }
 
   showBlurOverlay() {
-    this.body.classList.add('nav-open');
+    this.body.classList.add(this.classNames.Body);
   }
 
   hideBlurOverlay() {
-    this.body.classList.remove('nav-open');
+    this.body.classList.remove(this.classNames.Body);
   }
 
   show() {
-    this._listMenu.style.height = this._listMenu.scrollHeight + 'px';
+    if(this.mediaXl) this._listMenu.style.height = this._listMenu.scrollHeight + 'px';
+    this._elemHover.classList.add(this.classNames.Active);
     this.showBlurOverlay();
   }
 
   hidden() {
-    this._listMenu.style.height = "0";
+    if(this.mediaXl) this._listMenu.style.height = "0";
+    this._elemHover.classList.remove(this.classNames.Active);
     this.hideBlurOverlay();
+  }
+
+  toggleMenu() {
+    this.body.classList.contains(this.classNames.Body) ? this.hidden() : this.show()
   }
 
   handleMouseover() {
@@ -42,9 +53,17 @@ export class hoverMenu {
     this._hoverHolding.addEventListener('mouseleave', () => this.hidden())
   }
 
+  handleClick() {
+    this._hoverHolding.addEventListener('click', () => this.toggleMenu())
+  }
+
   _events() {
-    this.handleMouseover();
-    this.handleMouseleave();
+    if (this.mediaXl) {
+      this.handleMouseover();
+      this.handleMouseleave();
+    } else {
+      this.handleClick();
+    }
   }
 
   _init() {

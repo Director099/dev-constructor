@@ -11,20 +11,18 @@
 
   @media (min-width: $screen-xl) {
     padding-top: 13px;
-    padding-bottom: 10px;
+    padding-bottom: 13px;
     margin-bottom: 16px;
     background-color: $system-black;
     min-height: 56px;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
   }
 
   .logo {
-    @media (min-width: $screen-xl) {
-      position: absolute;
-      top: 50%;
-      left: 17px;
-      transform: translateY(-50%);
-    }
+    display: block;
   }
 }
 
@@ -60,10 +58,19 @@
   max-width: 270px;
 }
 
+.page-header__layout-center {
+  align-items: center;
+}
+
 .page-header__burger {
   position: absolute;
   top: 0;
   right: 0;
   width: 48px;
   height: 48px;
+
+  @media (min-width: $screen-xl) {
+    position: static;
+    margin: -9px 0 -9px auto;
+  }
 }

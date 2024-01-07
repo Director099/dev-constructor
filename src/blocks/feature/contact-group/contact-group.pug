@@ -1,0 +1,32 @@
+-
+  const linksContactGroup = [
+    {
+      label: numberPhone.text,
+      href: numberPhone.href,
+      className: 'contact-group__link--no-border',
+    },
+    {
+      label: "ivan@barashev.com",
+      href: "mailto:ivan@barashev.com",
+      className: 'contact-group__link--no-border',
+    },
+    {
+      label: "Telegram",
+      target: "_blank",
+      href: "https://t.me/pplans"
+    },
+    {
+      label: "WhatsApp",
+      target: "_blank",
+      href: "https://wa.me/79374700900"
+    },
+  ]
+
+mixin contact-group
+  .contact-group
+    .contact-group__messengers
+      each item in linksContactGroup
+        a.contact-group__link(href=item.href target=item.target class=item.className)
+          span= item.label
+    .contact-group__socials
+      +socials
