@@ -54,7 +54,7 @@ export class hoverMenu {
   }
 
   handleClick() {
-    this._hoverHolding.addEventListener('click', () => this.toggleMenu())
+    this._elemHover.addEventListener('click', () => this.toggleMenu())
   }
 
   _events() {

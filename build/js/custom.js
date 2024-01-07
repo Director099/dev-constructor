@@ -55,7 +55,7 @@
       this._hoverHolding.addEventListener('mouseleave', () => this.hidden());
     }
     handleClick() {
-      this._hoverHolding.addEventListener('click', () => this.toggleMenu());
+      this._elemHover.addEventListener('click', () => this.toggleMenu());
     }
     _events() {
       if (this.mediaXl) {
